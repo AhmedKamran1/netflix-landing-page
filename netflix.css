@@ -1,0 +1,346 @@
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100vw;
+    height: 93vh;
+    position: relative;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/0f07b807-7be1-457d-be88-eb9153d5d4e9/9160a6d6-7f4f-4864-af9e-df9bc5054e99/PK-en-20220815-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.showcase:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.showcase-top svg {
+    width: 170px;
+    position: absolute;
+    top: 2%;
+    left: 8%;
+    transform: translate(-50%, 50%);
+    fill: var(--primary-color);
+}
+
+.showcase-content {
+    position: relative;
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.showcase-content h1 {
+    font-size: 3.7rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0 0 2rem;
+
+}
+
+.showcase-content p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+}
+
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+.tab-border:hover {
+    animation: tabstyling;
+    animation-duration: 0.75s;
+}
+
+@keyframes tabstyling {
+    from{
+        border-bottom: var(--dark-color) 4px solid;
+    }
+    to{
+        border-bottom: var(--primary-color) 4px solid;
+    }
+}
+
+.tab-item {
+    flex-basis: 22rem;
+    flex-shrink: 1;
+}
+
+.container>div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+.tab-content-1-inner p {
+    box-sizing: border-box;
+    width: 50rem;
+}
+
+.tab-content-1-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.tab-content-1-inner img {
+    height: 25rem;
+    width: 35rem;
+}
+
+.tab-content-2-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    column-gap: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tab-content-2-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.tab-content-2-bottom p {
+    text-align: center;
+    width: 25rem;
+}
+
+.tab-content-2-bottom img {
+    height: 16rem;
+    width: 25rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.table{
+    width: 100%;
+    margin-top: 5rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    box-sizing: border-box;
+}
+
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td{
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+.table tbody tr td:first-child{
+    text-align: left;
+}
+
+.footer{
+    max-width: 75%;
+    margin: 1rem auto;
+    margin-top: 10rem;
+    overflow: auto;
+}
+
+.footer,.footer a{
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 1.9rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.45rem 1.1rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px black;
+    border-radius: 1px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 3px;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.text-md {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.text-margin-top{
+    margin-top: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+#tab-content-1{
+    /* display: none; */
+}
+
+#tab-content-2{
+    display: none;
+}
+
+#tab-content-3{
+    display: none;
+}
+
+.bg-grey{
+    background-color: rgba(70, 70, 70, 0.5);
+}
+
+/* body{
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/0f07b807-7be1-457d-be88-eb9153d5d4e9/9160a6d6-7f4f-4864-af9e-df9bc5054e99/PK-en-20220815-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-repeat: no-repeat;
+} */
